@@ -1,6 +1,3 @@
-import Badge from 'react-bootstrap/Badge';
-import Button from 'react-bootstrap/Button';
-import Stack from 'react-bootstrap/Stack';
 import Accordion from 'react-bootstrap/Accordion';
 import QuestionItem from './QuestionItem';
 import { useContext } from "react";
