@@ -1,13 +1,15 @@
 import Form from 'react-bootstrap/Form';
-import { quizzData } from '../data/QuizzData.js'
+import { useContext } from 'react';
+import { QuizzContext } from '../contexts/QuizzContext';
 
 export default function FilterQuiz({ category, onCategoryChange }) {
+    const { stateQuizzData } = useContext(QuizzContext);
 
     // Ici on extrait les categories dans un array categories pour les manipuler plus facilement
     let categories = [];
 
-    for (let index = 0; index < quizzData.length; index++) {
-        const cat = quizzData[index].category;
+    for (let index = 0; index < stateQuizzData.length; index++) {
+        const cat = stateQuizzData[index].category;
         // On vérifie également qu'on récupère qu'une fois chaque catégorie 
         // pour prévenir du cas où on aurait plusieurs questions de la même catégorie
         if (!categories.includes(cat)) {
