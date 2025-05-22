@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './assets/styles/app.scss'
 import { useState } from 'react';
-import FilterQuiz from './assets/components/FilterQuizz';
-import QuizzAccordion from './assets/components/QuizzAccordion';
+import FilterQuiz from './components/FilterQuizz'
+import QuizzAccordion from './components/QuizzAccordion';
 
 export default function App() {
     const [category, setCategory] = useState("0");

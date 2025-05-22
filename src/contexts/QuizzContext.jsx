@@ -1,6 +1,6 @@
 import { createContext, useReducer } from "react";
 import { quizzReducer } from "../reducers/quizzReducer";
-import { quizzData } from "../data/QuizzData";
+import { quizzData } from "../assets/data/QuizzData";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const QuizzContext = createContext();

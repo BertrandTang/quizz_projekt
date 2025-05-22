@@ -5,17 +5,11 @@ import { QuizzContext } from '../contexts/QuizzContext';
 export default function FilterQuiz({ category, onCategoryChange }) {
     const { stateQuizzData } = useContext(QuizzContext);
 
-    // Ici on extrait les categories dans un array categories pour les manipuler plus facilement
-    let categories = [];
+    // On utilise map pour récupérer toutes les catégories des questions
+    // puis Set pour éliminer les doublons (Set ne garde que les valeurs uniques). Set renvoie un objet. 
+    // Enfin, le spread operator [...] transforme le Set en un tableau utilisable dans le composant
+    const categories = [...new Set(stateQuizzData.map(question => question.category))];
 
-    for (let index = 0; index < stateQuizzData.length; index++) {
-        const cat = stateQuizzData[index].category;
-        // On vérifie également qu'on récupère qu'une fois chaque catégorie 
-        // pour prévenir du cas où on aurait plusieurs questions de la même catégorie
-        if (!categories.includes(cat)) {
-            categories.push(cat);
-        }
-    }
     return (
         <Form.Select
         aria-label="Category select"
