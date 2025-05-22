@@ -18,6 +18,7 @@ export default function QuestionItem({ question, dispatch, eventKey }) {
                 )}
             </Accordion.Header>
             <Accordion.Body>
+                <span><strong>Réponse</strong></span> <br/>
                 {question.answer}
                 <Stack direction="horizontal" gap={3} className="align-items-center">
                     <Button

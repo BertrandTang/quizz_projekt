@@ -11,16 +11,19 @@ export default function FilterQuiz({ category, onCategoryChange }) {
     const categories = [...new Set(stateQuizzData.map(question => question.category))];
 
     return (
+        <>
+        <span>Filtrer par catégorie</span> <br/>
         <Form.Select
         aria-label="Category select"
         value={category}
         // On envoie category à App.jsx via l'écouteur d'évènement onCategoryChange 
             onChange={event => onCategoryChange(event.target.value)}
         >
-            <option value="0">Toutes les catégories</option>
+            <option value="0">Toutes</option>
             {categories.map((cat, index) =>
                 <option key={index} value={cat}>{cat}</option>
             )}
         </Form.Select>
+        </>
     );
 }
