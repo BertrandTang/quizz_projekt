@@ -1,0 +1,58 @@
+export const quizzData = [
+    {
+        id: 1,
+        category: "Jeux Vidéos",
+        question: "Qui est le personnage principal de Zelda: Breath of the Wild",
+        answer: "Link",
+        validation: true,
+    },
+    {
+        id: 2,
+        category: "Anime",
+        question: "Qui a détruit le village de Konoha ?",
+        answer: "Pain",
+        validation: null,
+    },
+    {
+        id: 3,
+        category: "Séries",
+        question: "Dans quelle séries trouve-t-on le personnage de Daniel Jackson ?",
+        answer: "Animal Crossing",
+        validation: false,
+    },
+    {
+        id: 4,
+        category: "Films",
+        question: "Qui est le père de Luke Skywalker ?",
+        answer: "Dark Vador / Anakin Skywalker",
+        validation: null,
+    },
+    {
+        id: 5,
+        category: "Jeux Vidéos",
+        question: "Dans quelle ville se déroule l'histoire de Cyberpunk77",
+        answer: "Pékin",
+        validation: null,
+    },
+    {
+        id: 6,
+        category: "Anime",
+        question: "Dans Frieren, comment s'appelle le sort basique que Frieren apprend à Fern ?",
+        answer: "Zoltraak",
+        validation: null,
+    },
+    {
+        id: 7,
+        category: "Séries",
+        question: "Dans GOT, Brienne de Torth devient-elle première Chevalière des 7 royaumes ?",
+        answer: "Vrai",
+        validation: null,
+    },
+    {
+        id: 8,
+        category: "Films",
+        question: "Comment s'appelle monstre dans Alien ?",
+        answer: "Xenomorph",
+        validation: null,
+    },
+];
