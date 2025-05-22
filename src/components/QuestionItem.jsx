@@ -2,6 +2,8 @@ import Accordion from 'react-bootstrap/Accordion';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 import Stack from 'react-bootstrap/Stack';
+import Form from 'react-bootstrap/Form';
+import Card from 'react-bootstrap/Card';
 
 export default function QuestionItem({ question, dispatch, eventKey }) {
     return (
@@ -18,8 +20,13 @@ export default function QuestionItem({ question, dispatch, eventKey }) {
                 )}
             </Accordion.Header>
             <Accordion.Body>
-                <span><strong>Réponse</strong></span> <br/>
-                {question.answer}
+                <Card>
+                    <Card.Body>
+                        Réponse <br />
+                        {question.answer}
+                    </Card.Body>
+                </Card>
+
                 <Stack direction="horizontal" gap={3} className="align-items-center">
                     <Button
                         variant="success"
