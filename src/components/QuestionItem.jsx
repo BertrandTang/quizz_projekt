@@ -2,22 +2,23 @@ import Accordion from 'react-bootstrap/Accordion';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 import Stack from 'react-bootstrap/Stack';
-import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 
 export default function QuestionItem({ question, dispatch, eventKey }) {
     return (
         <Accordion.Item eventKey={eventKey}>
-            <Accordion.Header>
-                {question.question}
-                {question.validation !== null && (
-                    <Badge
-                        bg={question.validation ? "success" : "danger"}
-                        className="ms-2"
-                    >
-                        {question.validation ? "Vrai" : "Faux"}
-                    </Badge>
-                )}
+               <Accordion.Header>
+                <div className="d-flex justify-content-between align-items-center w-100">
+                    <span>{question.question}</span>
+                    {question.validation !== null && (
+                        <Badge
+                            bg={question.validation ? "success" : "danger"}
+                            className="ms-2"
+                        >
+                            {question.validation ? "Juste" : "Fausse"}
+                        </Badge>
+                    )}
+                </div>
             </Accordion.Header>
             <Accordion.Body>
                 <Card>
@@ -33,14 +34,14 @@ export default function QuestionItem({ question, dispatch, eventKey }) {
                         disabled={question.validation !== null}
                         onClick={() => dispatch({ type: "validate", id: question.id, value: true })}
                     >
-                        Vrai
+                        Juste
                     </Button>
                     <Button
                         variant="danger"
                         disabled={question.validation !== null}
                         onClick={() => dispatch({ type: "validate", id: question.id, value: false })}
                     >
-                        Faux
+                        Fausse
                     </Button>
                     <Button
                         variant="secondary"
