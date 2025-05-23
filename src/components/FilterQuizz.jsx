@@ -12,7 +12,7 @@ export default function FilterQuiz({ category, onCategoryChange }) {
 
     return (
         <>
-        <span>Filtrer par catégorie</span> <br/>
+          <div className="p-2">Filtrer par catégorie </div>
         <Form.Select
         aria-label="Category select"
         value={category}

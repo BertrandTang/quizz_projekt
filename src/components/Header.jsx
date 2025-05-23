@@ -1,8 +1,10 @@
+import { Container } from "react-bootstrap"
+
 export default function Header() {
 
     return (
-        <>
-            <h1>Quizz-O-matic</h1>
-        </>
+        <Container as="header">
+            <h1 className="m-1">Quiz Interactif</h1>
+        </Container>
     );
 }
